@@ -17,6 +17,7 @@ const (
 )
 
 func main() {
+	fmt.Println(Hello("Brendan", english))
 }
 
 func Hello(name string, language languages) string {
