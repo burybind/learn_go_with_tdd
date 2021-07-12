@@ -6,6 +6,7 @@ const (
 	englishHello = "Hello"
 	spanishHello = "Hola"
 	frenchHello  = "Bonjour"
+	italianHello = "Ciao"
 )
 
 type languages int
@@ -14,6 +15,7 @@ const (
 	english = iota
 	spanish
 	french
+	italian
 )
 
 func main() {
@@ -31,6 +33,8 @@ func Hello(name string, language languages) string {
 		prefix = spanishHello
 	case french:
 		prefix = frenchHello
+	case italian:
+		prefix = italianHello
 	default:
 		prefix = englishHello
 	}
