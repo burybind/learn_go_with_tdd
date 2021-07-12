@@ -50,7 +50,7 @@ func TestSumAllTails(t *testing.T) {
 
 	t.Run("make lthe sums of some slices", func(t *testing.T) {
 		got := SumAllTails([]int{1, 2, 3}, []int{4, 5, 6})
-		want := []int{5, 10}
+		want := []int{5, 11}
 
 		checkSums(t, got, want)
 	})
