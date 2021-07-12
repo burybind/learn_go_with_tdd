@@ -3,12 +3,15 @@ package shapes
 import "math"
 
 type Rectangle struct {
-	width  float64
-	height float64
+	width, height float64
 }
 
 type Circle struct {
 	radius float64
+}
+
+type Triangle struct {
+	baseWidth, height float64
 }
 
 type Shape interface {
@@ -25,4 +28,8 @@ func (r Rectangle) Area() float64 {
 
 func (c Circle) Area() float64 {
 	return math.Pi * c.radius * c.radius
+}
+
+func (t Triangle) Area() float64 {
+	return .5 * t.baseWidth * t.height
 }
