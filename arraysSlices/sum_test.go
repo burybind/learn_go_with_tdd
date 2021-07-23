@@ -18,11 +18,22 @@ func TestSum(t *testing.T) {
 		}
 	})
 
-	t.Run("collection of any size", func(t *testing.T) {
-		numbers := []int{1, 2, 3}
+	t.Run("collection of size 1", func(t *testing.T) {
+		numbers := []int{1}
 
 		got := Sum(numbers)
-		want := 6
+		want := 1
+
+		if got != want {
+			t.Errorf("got %d want %d given, %v", got, want, numbers)
+		}
+	})
+
+	t.Run("empty collection", func(t *testing.T) {
+		numbers := []int{}
+
+		got := Sum(numbers)
+		want := 0
 
 		if got != want {
 			t.Errorf("got %d want %d given, %v", got, want, numbers)
